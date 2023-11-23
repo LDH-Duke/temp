@@ -1,0 +1,51 @@
+#signin-container {
+    height: 100vh;
+    background-color: #eeeeee;
+}
+
+#signin-container .signin-box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#signin-container .signin-box .signin-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 30%;
+}
+
+#signin-container .signin-box .signin-wrap .form-title {
+    padding-bottom: 20px;
+    font-size: 30px;
+
+    .title {
+        color: black;
+    }
+}
+
+#signin-container .signin-box .signin-wrap .form-wrap {}
+
+#signin-container .signin-box .signin-wrap .form-wrap .ant-form {
+    background-color: white;
+    padding: 3vh;
+}
+
+#signin-container .ant-form button {
+    width: 100%;
+}
+
+#signin-container .ant-form .ant-btn-link {
+    border: 1px solid #1d1d1d;
+    color: #1d1d1d;
+
+}
+
+#signin-container .ant-form .signin-button {
+    background-color: #1d1d1d;
+    margin-bottom: 10px;
+}
