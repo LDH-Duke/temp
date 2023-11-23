@@ -1,25 +1,35 @@
-import React from 'react'
-import SignInPresenter from './SignInPresenter'
-import { useNavigate } from 'react-router-dom'
+import React, { useState } from 'react';
+import SignInPresenter from './SignInPresenter';
+import { useNavigate } from 'react-router-dom';
+import {io} from 'socket.io-client'
+
+// const webSocket = io.connect('http://localhost:5000')
 
 const SignInContainer = () => {
     const navigate = useNavigate();
+    const [account, setAccount] = useState('');
+    const [isLogin, setIsLogin] = useState(false)
     /**
      * siginin 핸들러
      */
-    const handleSignIn = async (userInfo) => {
-        console.log(userInfo)
+    const handleAccountChange = (userAccount) => {
+        setAccount(userAccount);
+        console.log(account)
     }
 
     /**
-     * signup 페이지 이동
+     * socket 연결 핸들러
      */
-    const handleMoveSignUp = () => {
-        navigate('/signup');
+    const handleConnectChat = (e) =>{
+        // webSocket.emit('login', account)
+        setIsLogin(true)
+        console.log('연결', isLogin)
+        navigate('/chat')
     }
 
+
     return (
-        <SignInPresenter handleSignIn={handleSignIn} handleMoveSignUp={handleMoveSignUp} />
+        <SignInPresenter account={account} onAccountChange={handleAccountChange} onConnectSocket={handleConnectChat} />
     )
 }
 

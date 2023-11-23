@@ -6,7 +6,6 @@ const Router = () => {
     return (
         <div>
             <Routes>
-                {/* <Route path='/signup' /> */}
                 <Route path='/signin' element={<SignIn />} />
                 {/* <Route path='/chat' /> */}
             </Routes>
