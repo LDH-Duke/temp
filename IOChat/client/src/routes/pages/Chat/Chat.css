@@ -1,0 +1,94 @@
+#chat-container {
+    height: 100vh;
+    background-color: #eeeeee;
+}
+
+#chat-container .chat-box{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#chat-container .chat-box .chat-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 30%;
+}
+
+#chat-container .chat-title{
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#chat-container .chat-contents {
+    background-color: white;
+    border: 2px solid #1d1d1d;
+    border-radius: 5px;
+    padding: 5px 0 ;
+    margin-bottom: 20px;
+    height: 50%;
+    overflow: auto;
+}
+
+#chat-container .chat-form{
+    width: 100%;
+}
+
+#chat-container button{
+    background-color: #1d1d1d;
+}
+
+/*메시지 부분*/
+
+#chat-container .chat{
+    padding: 0 15px;
+    /* padding-left: 5px;
+    padding-right: 5px; */
+}
+
+#chat-container li.other{
+    text-align: right;
+}
+
+#chat-container .userId{
+    margin-bottom: 5px;
+}
+
+#chat-container div.me{
+    display: inline-block;
+    /* border: 1px solid #1d1d1d; */
+    border-radius: 5px;
+    padding: 3px 5px;
+    background-color: #1d1d1d;
+    color: white;
+}
+
+#chat-container div.other{
+    display: inline-block;
+    /* border: 1px solid #1d1d1d; */
+    border-radius: 5px;
+    padding: 3px 5px;
+    background-color: #1d1d1d;
+    color: white;
+}
+
+#chat-container .welcome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#chat-container .line{
+    height: 0.5px;
+    flex: 1 1 auto;
+    margin: 0 20px;
+    background-color: #1d1d1d;
+}
+
+/*form*/

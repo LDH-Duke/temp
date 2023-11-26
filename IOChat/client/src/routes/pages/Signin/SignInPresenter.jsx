@@ -3,7 +3,11 @@ import { Input, Button, Form } from 'antd';
 import { Link } from 'react-router-dom'
 import './SignIn.css'
 
-const SignInPresenter = ({ account, onAccountChange, onConnectSocket }) => {
+const SignInPresenter = ({ 
+    userid,
+    account, 
+    onAccountChange,
+    onConnectSocket }) => {
 
     /**
      * container로 유저정보 전송
@@ -27,7 +31,7 @@ const SignInPresenter = ({ account, onAccountChange, onConnectSocket }) => {
                     <div className='form-wrap'>
                         <Form onFinish={onConnectSocket}>
                             <Form.Item name='user-account'>
-                                <Input size='large' placeholder='Account' onChange={accountChange} value={account}/>
+                                <Input size='large' placeholder='Account' onChange={accountChange} value={userid}/>
                             </Form.Item>
                             <Button className='signin-button' type='primary' htmlType='submit'>Sign in</Button>
                         </Form>
